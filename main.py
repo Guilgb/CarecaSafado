@@ -19,7 +19,7 @@ def opcao(opcao=input()):
             mensagem_sms.conteudo = input()
             print("Digite o numero de celular: ")
             mensagem_sms.telefone = input()
-            return mensagem_sms
+            return print(mensagem_sms)
 
         case "2":
 
@@ -28,10 +28,9 @@ def opcao(opcao=input()):
             mensagem_email.conteudo = input()
             print("Digite o endereço de email de destino: ")
             mensagem_email.endereco = input()
-            return mensagem_email
+            return print(mensagem_email)
         case _:
             return print("Valor invalido!!")
 
 
 opcao()
-print("Commit Save")
