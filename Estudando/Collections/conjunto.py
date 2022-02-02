@@ -4,4 +4,5 @@ usuarios_machine_learning = [12, 23, 43, 2]
 
 assistiram = usuarios_data_science.copy()
 assistiram.extend(usuarios_machine_learning)
-print(assistiram)
+# Criando conjunto com set(), e não existe posição
+print(set(assistiram), "\nTamanho:", len(set(assistiram)))
