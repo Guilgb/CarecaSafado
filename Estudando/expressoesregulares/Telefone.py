@@ -17,4 +17,4 @@ class Telefone:
             return False
 
     def __str__(self):
-        pass
+        return self.numero
