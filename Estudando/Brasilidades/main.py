@@ -53,7 +53,7 @@ class DocCnpj:
         return self.format()
 
 
-cnpj = "353379838000112"
+cnpj = "35337983800011"
 cpf = "07341965398222"
-documento = Documento.cria_documento("35379838000112")
+documento = Documento.cria_documento("35337983800012")
 print(documento)
