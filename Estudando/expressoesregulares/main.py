@@ -1,6 +1,7 @@
 from Telefone import Telefone
+# import re
 
-tel = " qweyiquuiewqheu qwehqiuheiquh 558899135590"
+tel = "5588999135590"
 
-tel_obj = Telefone(tel)
-print(tel_obj)
+telefone = Telefone(tel)
+print(telefone)
