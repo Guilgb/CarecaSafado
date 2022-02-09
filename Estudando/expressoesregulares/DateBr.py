@@ -20,3 +20,7 @@ class DateBr:
         ]
         dia_da_semana = self.momento_cadastro.weekday()
         return print(dia_semana_lista[dia_da_semana - 1])
+
+    def data_cadastrada(self):
+        data_format = self.momento_cadastro.strftime("%d/%m/%Y  %H:%M:%S")
+        print(data_format)
