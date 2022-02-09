@@ -1,3 +1,6 @@
+import requests
+
+
 class Acessocep:
     def __init__(self, cep):
         cep = str(cep)
@@ -17,3 +20,13 @@ class Acessocep:
 
     def __str__(self):
         return self.format()
+
+    def acessar_url(self):
+        url = f"https://viacep.com.br/ws/{self.cep}/json/"
+        r = requests.get(url)
+        dados = r.json()
+        return (
+            dados['ddd'],
+            dados['localidade'],
+            dados['uf']
+        )
