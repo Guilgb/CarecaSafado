@@ -1,4 +1,5 @@
 from datetime import datetime
+from gzip import READ
 
 
 class DateBr:
@@ -23,4 +24,7 @@ class DateBr:
 
     def data_cadastrada(self):
         data_format = self.momento_cadastro.strftime("%d/%m/%Y  %H:%M:%S")
-        print(data_format)
+        return data_format
+
+    def __str__(self) -> str:
+        return self.data_cadastrada()
