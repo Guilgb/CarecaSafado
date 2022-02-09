@@ -1,5 +1,4 @@
 from datetime import datetime
-from gzip import READ
 
 
 class DateBr:
