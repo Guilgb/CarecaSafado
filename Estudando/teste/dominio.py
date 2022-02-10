@@ -16,8 +16,12 @@ class Lance:
 class Leilao:
     def __init__(self, descricao):
         self.descricao = descricao
-        self.__laces = []
+        self.__lances = []
 
     @property
     def lances(self):
         return self.__lances
+
+    # @lances.setter
+    # def lances(self, lances):
+    #     self.__lances = lances

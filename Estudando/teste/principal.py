@@ -1,4 +1,3 @@
-from lances in leilao.lances:
 from dominio import Usuario
 from dominio import Lance
 from dominio import Leilao
@@ -12,6 +11,10 @@ lance_camy = Lance(camyla, 200)
 
 leilao = Leilao("Lance de Celulares")
 leilao.lances.append(lance_gui)
+leilao.lances.append(lance_camy)
 
 for lance in leilao.lances:
-    print(lance.usuario.nome)
+    print(
+        f"Usuario: {lance.usuario.nome}\nLance: {lance.valor}\n"
+        f"--------------------"
+    )
