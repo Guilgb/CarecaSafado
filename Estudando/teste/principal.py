@@ -5,8 +5,8 @@ gui = Usuario("Guilherme")
 camyla = Usuario("Camyla")
 gael = Usuario("Gael")
 
-lance_gui = Lance(gui, 1920)
-lance_camy = Lance(camyla, 2020)
+lance_gui = Lance(gui, 100)
+lance_camy = Lance(camyla, 200)
 lance_gael = Lance(gael, 20)
 
 leilao = Leilao("Lance de Celulares")
