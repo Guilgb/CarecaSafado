@@ -23,4 +23,6 @@ for lance in leilao.lances:
 avaliador = Avaliador()
 avaliador.avalia(leilao)
 print(
-    f'O menor lance foi de: {avaliador.menor_lance} \nO maior lance foi de: {avaliador.maior_lance}')
+    f"O menor lance foi de: {avaliador.menor_lance} \n"
+    f"O maior lance foi de: {avaliador.maior_lance}"
+)
