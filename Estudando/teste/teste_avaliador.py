@@ -3,7 +3,7 @@ import unittest
 from dominio import Usuario, Lance, Leilao, Avaliador
 
 
-def criaCenario(self):
+def setUp(self):
     self.gui = Usuario("Guilherme")
     self.camyla = Usuario("Camyla")
     self.gael = Usuario("Gael")
@@ -17,7 +17,7 @@ def criaCenario(self):
 
 class TesteAvaliador(TestCase):
     def test_avalia(self):
-        self.criaCenario()
+
         self.leilao.lances.append(self.lance_camy)
         self.leilao.lances.append(self.lance_gui)
         self.leilao.lances.append(self.lance_gael)
@@ -30,5 +30,5 @@ class TesteAvaliador(TestCase):
         maior_valor_esperado = 200
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
