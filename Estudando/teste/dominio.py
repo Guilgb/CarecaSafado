@@ -27,7 +27,7 @@ class Leilao:
 
     @property
     def lances(self):
-        return self.__lances
+        return self.__lances[:]  # copia rasa
 
 
 class Avaliador:
