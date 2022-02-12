@@ -21,13 +21,13 @@ class Leilao:
         self.descricao = descricao
         self.__lances = []
 
+    # tell dont ask
+    def propoe(self, lance: Lance):
+        self.__lances.append(lance)
+
     @property
     def lances(self):
         return self.__lances
-
-    # @lances.setter
-    # def lances(self, lances):
-    #     self.__lances = lances
 
 
 class Avaliador:

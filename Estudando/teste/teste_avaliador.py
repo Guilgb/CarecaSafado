@@ -18,9 +18,9 @@ class TesteAvaliador(TestCase):
 
     def test_avalia(self):
 
-        self.leilao.lances.append(self.lance_camy)
-        self.leilao.lances.append(self.lance_gui)
-        self.leilao.lances.append(self.lance_gael)
+        self.leilao.propoe(self.lance_camy)
+        self.leilao.propoe(self.lance_gui)
+        self.leilao.propoe(self.lance_gael)
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)
 
@@ -31,8 +31,8 @@ class TesteAvaliador(TestCase):
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
     def teste_avalia2(self):
-        self.leilao.lances.append(self.lance_gael)
-        self.leilao.lances.append(self.lance_gui)
+        self.leilao.propoe(self.lance_gael)
+        self.leilao.propoe(self.lance_gui)
 
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)

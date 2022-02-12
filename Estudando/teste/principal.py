@@ -10,9 +10,9 @@ lance_camy = Lance(camyla, 200)
 lance_gael = Lance(gael, 20)
 
 leilao = Leilao("Lance de Celulares")
-leilao.lances.append(lance_gui)
-leilao.lances.append(lance_camy)
-leilao.lances.append(lance_gael)
+leilao.propoe(lance_gui)
+leilao.propoe(lance_gael)
+leilao.propoe(lance_camy)
 
 for lance in leilao.lances:
     print(
