@@ -1,4 +1,4 @@
-from dominio import Usuario, Lance, Leilao, Avaliador
+from dominio import Usuario, Lance, Leilao
 
 
 gui = Usuario("Guilherme")
@@ -19,10 +19,7 @@ for lance in leilao.lances:
         f"Usuario: {lance.usuario.nome}\nLance: {lance.valor}\n"
         f"--------------------"
     )
-
-avaliador = Avaliador()
-avaliador.avalia(leilao)
 print(
-    f"O menor lance foi de: {avaliador.menor_lance} \n"
-    f"O maior lance foi de: {avaliador.maior_lance}"
+    f"O menor lance foi de: {leilao.menor_lance} \n"
+    f"O maior lance foi de: {leilao.maior_lance}"
 )
