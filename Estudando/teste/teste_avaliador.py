@@ -30,6 +30,19 @@ class TesteAvaliador(TestCase):
         maior_valor_esperado = 200
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
+    def teste_avalia2(self):
+        self.leilao.lances.append(self.lance_gael)
+        self.leilao.lances.append(self.lance_gui)
+
+        avaliador = Avaliador()
+        avaliador.avalia(self.leilao)
+
+        menor_valor_esperado = 20
+        maior_valor_esperado = 100
+
+        self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
+        self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
+
 
 if __name__ == '__main__':
     unittest.main()
