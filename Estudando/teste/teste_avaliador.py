@@ -3,23 +3,26 @@ import unittest
 from dominio import Usuario, Lance, Leilao, Avaliador
 
 
+def criaCenario(self):
+    self.gui = Usuario("Guilherme")
+    self.camyla = Usuario("Camyla")
+    self.gael = Usuario("Gael")
+
+    self.lance_gui = Lance(self.gui, 100)
+    self.lance_camy = Lance(self.camyla, 200)
+    self.lance_gael = Lance(self.gael, 20)
+
+    self.leilao = Leilao("Lance de Celulares")
+
+
 class TesteAvaliador(TestCase):
     def test_avalia(self):
-        gui = Usuario("Guilherme")
-        camyla = Usuario("Camyla")
-        # gael = Usuario("Gael")
-
-        lance_gui = Lance(gui, 100)
-        lance_camy = Lance(camyla, 200)
-        # lance_gael = Lance(gael, 20)
-
-        leilao = Leilao("Lance de Celulares")
-        leilao.lances.append(lance_camy)
-        leilao.lances.append(lance_gui)
-        # leilao.lances.append(lance_gael)
-
+        self.criaCenario()
+        self.leilao.lances.append(self.lance_camy)
+        self.leilao.lances.append(self.lance_gui)
+        self.leilao.lances.append(self.lance_gael)
         avaliador = Avaliador()
-        avaliador.avalia(leilao)
+        avaliador.avalia(self.leilao)
 
         menor_valor_esperado = 100
         self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
