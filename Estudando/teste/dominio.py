@@ -25,12 +25,11 @@ class Leilao:
 
     # tell dont ask
     def propoe(self, lance: Lance):
-        self.__lances.append(lance)
         if (lance.valor > self.maior_lance):
             self.maior_lance = lance.valor
-
         if (lance.valor < self.menor_lance):
             self.menor_lance = lance.valor
+        self.__lances.append(lance)
 
     @property
     def lances(self):
