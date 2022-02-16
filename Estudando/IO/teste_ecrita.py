@@ -1,5 +1,15 @@
 arquivo_de_contatos = open(
     'Estudando/IO/contatos_escrita.csv', encoding="UTF-8", mode="a")
 
-contato = '11, Carol, carol@carol.com.br\n'
-arquivo_de_contatos.write(contato)
+contatos = [
+    '11, Carol, carol@carol.com.br\n',
+    '12, Ana, ana@ana.com.br\n',
+    '13 Tais, tais@tais.com.br\n',
+    '14 Felipe, felipe@felipe.com.br\n'
+]
+
+for contato in contatos:
+    arquivo_de_contatos.write(contato)
+
+arquivo_de_contatos.flush()
+input("Pressione <Enter> para encerrar o programa")
