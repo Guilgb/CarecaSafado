@@ -6,6 +6,6 @@ cursor = con.cursor()
 
 cursor.execute('''CREATE TABLE "Pessoas" (
             "nome" TEXT,
-            "Idade" INTERGER
+            "Id" INTERGER
             );''')
 con.commit()
